@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mangal House — шашлык, шаурма и блюда на углях в Ставрополе.">
+  <title>Mangal House — Главная</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">🔥 MANGAL <span>HOUSE</span></a>
+    <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+    <nav class="nav">
+      <a class="active" href="index.html">Главная</a>
+      <a href="menu.html">Меню</a>
+      <a href="contacts.html">Контакты</a>
+      <button class="cart-button" type="button" onclick="openCart()">Корзина <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">НАСТОЯЩИЙ ВКУС ОГНЯ</p>
+        <h1>Сочно. Горячо. <span>По-настоящему.</span></h1>
+        <p>Шашлык, шаурма, люля-кебаб и любимый стрит-фуд, приготовленные с душой.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="menu.html">Смотреть меню</a>
+          <a class="btn btn-secondary" href="contacts.html">Как нас найти</a>
+        </div>
+        <div class="hero-info">
+          <span>🕗 Ежедневно 08:00–21:00</span>
+          <span>🚚 Бесплатная доставка от 1500 ₽</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">ПОПУЛЯРНОЕ</p>
+        <h2>То, что заказывают чаще всего</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=80" alt="Шашлык на углях">
+          <div><h3>Шашлык на углях</h3><p>Сочная свинина, баранина и курица.</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80" alt="Шаурма">
+          <div><h3>Фирменная шаурма</h3><p>Много мяса, свежие овощи и соус.</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=900&q=80" alt="Бургер">
+          <div><h3>Сочные бургеры</h3><p>Горячие, сытные и очень вкусные.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="delivery-banner">
+      <div>
+        <p class="eyebrow">ДОСТАВКА И САМОВЫВОЗ</p>
+        <h2>Закажите прямо на сайте</h2>
+        <p>При сумме заказа от 1500 ₽ доставка бесплатная.</p>
+      </div>
+      <a class="btn btn-primary" href="menu.html">Сделать заказ</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>🔥 MANGAL HOUSE</strong><p>Authentic Grill • Street Food</p></div>
+    <div><p>Ежедневно: 08:00–21:00</p><p>Ставрополь</p></div>
+  </footer>
+
+  <div id="cartModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeCart()" aria-label="Закрыть">×</button>
+      <h2>Ваш заказ</h2>
+      <div id="cartItems"></div>
+      <div id="cartSummary"></div>
+      <form id="orderForm">
+        <input id="customerName" type="text" placeholder="Ваше имя" required>
+        <input id="customerPhone" type="tel" placeholder="Номер телефона" required>
+        <select id="deliveryType">
+          <option value="Доставка">Доставка</option>
+          <option value="Самовывоз">Самовывоз</option>
+        </select>
+        <input id="customerAddress" type="text" placeholder="Адрес доставки">
+        <textarea id="customerComment" placeholder="Комментарий к заказу"></textarea>
+        <button class="btn btn-primary full" type="submit">Отправить заказ</button>
+      </form>
+      <p class="form-note">После нажатия откроется Telegram с готовым текстом заказа.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
